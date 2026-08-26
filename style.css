@@ -1,4 +1,11 @@
 /* style.css */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url("font/Matcha\ Mint.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Shows fallback text while your font loads */
+}
 .boxed-text {
   border: 2px solid #2c3e50;
   background-color: #ecf0f1;
@@ -21,8 +28,11 @@
 }
 
 body {
-  background-color: powderblue;
+  background-image: linear-gradient(to bottom, powderblue, #4a90e2);
+  min-height: 100vh; /* Ensures the gradient covers the full screen height */
+  margin: 0;         /* Removes default browser spacing */
 }
+
 h1 {
     font-size: 48px;
     text-align: center;
@@ -31,9 +41,11 @@ h1 {
 }
 
 head {
+    font-family: 'MyCustomFont', sans-serif;
     -webkit-text-stroke: 2px black; /* Thickness and color of the outline */
     color: rgb(2, 255, 171);
-
+    justify-content: center; /* Centers horizontally (X-axis) */
+    align-items: center;     /* Centers vertically (Y-axis) */
 }
 
 .solid-outline-text {
